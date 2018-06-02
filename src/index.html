@@ -2,7 +2,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <title>Fortune Cookie</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.21/p5.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
@@ -66,6 +68,7 @@
 
         #title {
             font-size: 100px;
+            pointer-events: none;
         }
 
         #fade {
@@ -76,6 +79,16 @@
             -moz-animation: fade 3s infinite alternate;
             -o-animation: fade 3s infinite alternate;
             animation: fade 3s infinite alternate;
+        }
+
+        #blink {
+            opacity: 0.8;
+            color: #ebffff;
+            text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+            -webkit-animation: blink 3s infinite alternate;
+            -moz-animation: blink 3s infinite alternate;
+            -o-animation: blink 3s infinite alternate;
+            animation: blink 3s infinite alternate;
         }
 
         .neon-blue {
