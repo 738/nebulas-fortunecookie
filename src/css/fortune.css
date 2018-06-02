@@ -35,7 +35,7 @@
  }
  
  .fortune-message{    
-        display: inline-block;
+    display: inline-block;
      position: absolute;
      left: -150px;
      right: 180px;
@@ -47,19 +47,20 @@
      overflow: hidden;
      -webkit-transform: rotateZ(8deg);
      transform: rotateZ(8deg);
+     opacity: 0;
  }
 
  .fortune-message span{
     display:block;
     background-color: #fff;
-     padding: 8px 65px 7px 15px;
-  white-space: nowrap;
+    padding: 8px 65px 7px 15px;
+    white-space: nowrap;
   
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     transform-origin:right bottom;
     position:absolute;
     bottom: 20px;
-  right: 10px;
+    right: 10px;
  }
 
  @media only screen and (max-width: 768px) {
@@ -68,5 +69,11 @@
      }
     .fortune{
         margin-bottom: 0px;
+     }
+     .fortune-left{
+        background-size: 78px;
+     }
+     .fortune-right{
+        background-size: 100px;
      }
 }
