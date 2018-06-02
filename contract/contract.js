@@ -3,18 +3,6 @@ let LocalContractStorage = Stubs.LocalContractStorage;
 let Blockchain = Stubs.Blockchain;
 let TestMap = Stubs.TestMap;
 
-// class Fortune {
-//     constructor(str) {
-//         let obj = str ? JSON.parse(str) : {};
-//         this.id = obj.id || 0;
-//         this.content = obj.content || '';
-//     }
-
-//     toString() {
-//         return JSON.stringify(this);
-//     }
-// }
-
 class User {
     constructor(str) {
         let obj = str ? JSON.parse(str) : {};
@@ -58,7 +46,7 @@ class CookieManager {
 
     crackCookie() {
         var userAddress = Blockchain.transaction.from;
-        var fortune = this.fortunes.get(Math.floor(Math.random() * this.fortuneCount));
+        var fortune = this.fortunes.get(this._hash(userAddress));
         var timestamp = new Date();
         var user = this.users.get(userAddress) || new User();
         user.history.push({
@@ -73,6 +61,13 @@ class CookieManager {
         if (address === undefined) address = Blockchain.transaction.from;
         var user = this.users.get(address);
         return user.history;
+    }
+
+    _hash(address) {
+        if (this.fortuneCount === 0) throw new Error('fortunceCount = 0');
+        var num = address[2].charCodeAt() + address[4].charCodeAt() + address[6].charCodeAt() + address[8].charCodeAt();
+        var timestamp = new Date().getTime();
+        return (num + timestamp) % (this.fortuneCount);
     }
 }
 
