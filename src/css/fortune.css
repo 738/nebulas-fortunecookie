@@ -63,13 +63,10 @@
  }
 
  @media only screen and (max-width: 768px) {
+    .fortune-wrapper{
+        padding: 10px;
+     }
     .fortune{
-        width:500px;
-        height:200px;
-        display:block;
-        transform-origin:40% 50%;
-        transform:rotate(-10deg);
-        margin-left: 90px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
      }
 }
