@@ -1,0 +1,13 @@
+.square {
+    display: inline-block;
+    height: 400px;
+    width: 600px;
+    background: rgba(255, 255, 255, 0.75);
+    left: calc(50% - 300px);
+    top: 25%;
+    position: absolute;
+}
+
+.paper-shadow {
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.16);
+}

@@ -1,0 +1,112 @@
+.title-container {
+    font-family: 'Nixie One', Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    margin: 10px;
+}
+
+.sign {
+    -ms-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+#title {
+    font-size: 100px;
+    pointer-events: none;
+}
+
+#fade {
+    opacity: 0.8;
+    color: #ebffff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+    -webkit-animation: fade 3s infinite alternate;
+    -moz-animation: fade 3s infinite alternate;
+    -o-animation: fade 3s infinite alternate;
+    animation: fade 3s infinite alternate;
+}
+
+.neon-blue {
+    margin: 0 auto;
+    text-align: center;
+    color: #ebffff;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), 0 0px 15px #fff, 0 0 10px #38eeff, 0 0 50px #38eeff;
+}
+
+@-moz-keyframes fade {
+    40% {
+        opacity: 0.8;
+    }
+    42% {
+        opacity: 0.1;
+    }
+    43% {
+        opacity: 0.8;
+    }
+    45% {
+        opacity: 0.1;
+    }
+    46% {
+        opacity: 0.8;
+    }
+}
+
+@-webkit-keyframes fade {
+    40% {
+        opacity: 0.8;
+    }
+    42% {
+        opacity: 0.1;
+    }
+    43% {
+        opacity: 0.8;
+    }
+    45% {
+        opacity: 0.1;
+    }
+    46% {
+        opacity: 0.8;
+    }
+}
+
+@-o-keyframes fade {
+    40% {
+        opacity: 0.8;
+    }
+    42% {
+        opacity: 0.1;
+    }
+    43% {
+        opacity: 0.8;
+    }
+    45% {
+        opacity: 0.1;
+    }
+    46% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fade {
+    40% {
+        opacity: 0.8;
+    }
+    42% {
+        opacity: 0.1;
+    }
+    43% {
+        opacity: 0.8;
+    }
+    45% {
+        opacity: 0.1;
+    }
+    46% {
+        opacity: 0.8;
+    }
+}
