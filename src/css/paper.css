@@ -15,3 +15,11 @@
 .paper-shadow {
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.16);
 }
+
+@media only screen and (max-width: 768px) {
+    .square {
+        height: 300px;
+        width: 80%;
+        left: 10%;
+    }
+}
