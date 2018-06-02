@@ -1,5 +1,5 @@
 .pulse {
-    width: 200px;
+    width: 240px;
     height: 50px;
     border-radius: 25px;
     background: -webkit-linear-gradient(left, #4D8DBA, #43B3AF, #4D8DBA, #43B3AF);
@@ -11,6 +11,7 @@
     align-items: center;
     margin: 20px;
     color: #fff;
+    font-family: 'Roboto Slab', serif;
 }
 
 .pulse:hover {
