@@ -64,10 +64,9 @@ class CookieManager {
     }
 
     _hash(address) {
-        if (this.fortuneCount === 0) throw new Error('fortunceCount = 0');
-        var num = address[2].charCodeAt() + address[4].charCodeAt() + address[6].charCodeAt() + address[8].charCodeAt();
-        var timestamp = new Date().getTime();
-        return (num + timestamp) % (this.fortuneCount);
+        if (this.fortuneCount === 0) throw new Error('fortuneCount = 0');
+        var num = address[2].charCodeAt() + address[4].charCodeAt() + address[6].charCodeAt() + address[8].charCodeAt() + address[10].charCodeAt();
+        return (num + Blockchain.block.height) % (this.fortuneCount);
     }
 }
 
