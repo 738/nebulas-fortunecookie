@@ -1,0 +1,63 @@
+.fortune-wrapper{
+    display: inline-block;
+    padding: 20px;
+ }
+ .fortune{
+    width:500px;
+    height:200px;
+    display:block;
+    transform-origin:40% 50%;
+    transform:rotate(-10deg);
+    margin-left: 90px;
+    margin-bottom: 20px;
+ }
+ 
+ .fortune-left{
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:0;
+    background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77607/cookie-left.png");
+    background-repeat:no-repeat;
+    background-position:right center;   
+    z-index:1;
+ }
+ .fortune-right{
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:190px;
+    background-image:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/77607/cookie-right.png");
+    background-position:20px 20px;
+    background-repeat:no-repeat;
+    background-position:left center;
+    z-index:3;
+ }
+ 
+ .fortune-message{    
+        display: inline-block;
+     position: absolute;
+     left: -150px;
+     right: 180px;
+     font-family: courier;
+     top: 50px;
+     bottom: 80px;
+     font-style: italic;
+     z-index: 2;
+     overflow: hidden;
+     -webkit-transform: rotateZ(8deg);
+     transform: rotateZ(8deg);
+ }
+
+ .fortune-message span{
+    display:block;
+    background-color: #fff;
+     padding: 8px 65px 7px 15px;
+  white-space: nowrap;
+  
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transform-origin:right bottom;
+    position:absolute;
+    bottom: 20px;
+  right: 10px;
+ }

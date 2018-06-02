@@ -1,11 +1,15 @@
 .square {
-    display: inline-block;
     height: 400px;
     width: 600px;
     background: rgba(255, 255, 255, 0.75);
     left: calc(50% - 300px);
-    top: 25%;
+    top: 35%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
 }
 
 .paper-shadow {
