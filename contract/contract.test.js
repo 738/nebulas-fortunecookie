@@ -9,7 +9,6 @@ Blockchain.changeTransactionAfterGet = false;
 let contract = new CookieManager();
 contract.init();
 
-console.log(contract.save("[\"a\", \"b\", \"c\", \"d\", \"e\"]"));
 console.log(contract.save("[\"1\", \"2\", \"3\", \"4\", \"5\"]"));
 console.log(contract.crackCookie());
 console.log(contract.crackCookie());
