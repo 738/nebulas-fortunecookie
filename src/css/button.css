@@ -1,3 +1,10 @@
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row; */
+}
+
 .pulse {
     width: 240px;
     height: 50px;
@@ -16,6 +23,12 @@
 
 .pulse:hover {
     animation: none;
+}
+
+#history {
+    background: -webkit-linear-gradient(left, #f39c12, #e67e22, #f39c12, #e67e22);
+    box-shadow: 0 0 0 rgba(243, 156, 18, 0.4);
+    animation: pulse-history 2s infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -45,9 +58,39 @@
     }
 }
 
+@-webkit-keyframes pulse-history {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 30px rgba(243, 156, 18, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
+@keyframes pulse-history {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba(243, 156, 18, 0);
+        box-shadow: 0 0 0 30px rgba(243, 156, 18, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+        box-shadow: 0 0 0 0 rgba(243, 156, 18, 0);
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .pulse {
         padding: 20px 10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        width: 50%;
+        height: 30px;
+        font-size: 12px;
     }
 }

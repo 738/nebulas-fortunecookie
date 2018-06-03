@@ -71,5 +71,18 @@ However, delay the fade out process for 2.5 seconds */
     to {bottom: 30px; opacity: 0.8;}
 }
 
+@media only screen and (max-width: 768px) {
+    #snackbar {
+        right: calc(50%-100px);
+        bottom: 30px;
+    }
 
+    #snackbar .warning-title {
+        font-size: 12px;
+    }
 
+    #snackbar .warning-description {
+        font-size: 10px;
+    }
+    
+}

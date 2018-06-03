@@ -46,5 +46,5 @@ async function crackCookie() {
         $('#fortune-message-span').html(fortune.replace(/\"/g, ""));
     });
     // $("#loading-wrapper").addClass("hide");
-    showFortune();
+    setTimeout(showFortune, 2000);
 }
