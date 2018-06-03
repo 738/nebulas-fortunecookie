@@ -1,0 +1,75 @@
+#snackbar .warning-title {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* animation: blur .75s ease-out infinite; */
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+#snackbar .warning-description {
+    font-size: 1em;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+#snackbar .warning-description a {
+    text-decoration: none;
+    color: #81ecec;
+    pointer-events: visible;
+}
+/* 
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+  }
+} */
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: absolute; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    right: 30px; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    opacity: 0.8;
+    font-family: "Open Sans",  Impact;
+    pointer-events: none;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.snackbar-show {
+    visibility: visible !important; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 1.5s;
+    animation: fadein 1.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.8;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.8;}
+}
+
+
+
