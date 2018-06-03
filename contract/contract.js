@@ -14,8 +14,8 @@ class User {
         return JSON.stringify(this);
     }
 }
-// testnet
-var ownerAddress = "n1VWG9TEQwMzfDtb9eFULDk9XwSZuzTfVST";
+// mainnet
+var ownerAddress = "n1YDQxpxSf7mDiFCimh2cCSg1B3sbAShAeA";
 class CookieManager {
     constructor() {
         LocalContractStorage.defineProperty(this, "fortuneCount");
@@ -59,7 +59,7 @@ class CookieManager {
 
     getHistory(address) {
         if (address === undefined) address = Blockchain.transaction.from;
-        var user = this.users.get(address);
+        var user = this.users.get(address) || new User();
         return user.history;
     }
 
