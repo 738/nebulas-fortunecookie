@@ -2,7 +2,6 @@
   font-size: 2em;
   font-weight: 700;
   text-transform: uppercase;
-  /* animation: blur .75s ease-out infinite; */
   text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 }
 
@@ -16,21 +15,6 @@
     color: #81ecec;
     pointer-events: visible;
 }
-/* 
-@keyframes blur {
-  from {
-    text-shadow:0px 0px 10px #fff,
-      0px 0px 10px #fff, 
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #fff,
-  }
-} */
 
 #snackbar {
     visibility: hidden; /* Hidden by default. Visible on click */
