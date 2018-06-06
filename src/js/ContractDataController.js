@@ -35,8 +35,8 @@ class ContractDataController {
         this.intervalId = setInterval(() => {
             this._queryPayInfo(successCallbackListener, failCallbackListener);
             this.intervalCount++;
-            // console.log(this.intervalId);
-            // console.log(this.intervalCount);
+            console.log(this.intervalId);
+            console.log(this.intervalCount);
             if (this.intervalCount > 6) {
                 clearInterval(this.intervalId);
                 this.intervalCount = 0;
@@ -49,6 +49,7 @@ class ContractDataController {
         this.nebPay.queryPayInfo(this.serialNumber, { callback: this.callbackUrl })
             .then(res => {
                 var status = JSON.parse(res).data.status;
+                console.log(res);
                 // tx: pending
                 if (status === 1 || status === 0) {
                     if (this.intervalId) clearInterval(this.intervalId);
