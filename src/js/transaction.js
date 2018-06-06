@@ -57,7 +57,8 @@ async function successCallback() {
     });
     $("#loading-wrapper").addClass("hide");
     showFortune();
-    $("#crack-cookie").html("Tweet This Fortune");
+    $("#crack-cookie").html(`<i class="fab fa-twitter" style="margin-right: 10px"></i>Tweet This Fortune`);
+    $("#crack-cookie").addClass("twitter");
 }
 
 function failCallback() {

@@ -25,6 +25,10 @@
     animation: none;
 }
 
+.twitter {
+    background: #00aced!important;
+}
+
 #lastfortune {
     background: -webkit-linear-gradient(left, #f39c12, #e67e22, #f39c12, #e67e22);
     box-shadow: 0 0 0 rgba(243, 156, 18, 0.4);
