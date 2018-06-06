@@ -1,10 +1,18 @@
 $(function () {
+    var isCracked = false;
     $("#crack-cookie").click(function () {
-        if (typeof (webExtensionWallet) === 'undefined') {
-            crackCookie();
-        } else {
-            var contractDataController = new ContractDataController();
-            contractDataController.sendTransaction(0, "crackCookie", "", pendingCallback, successCallback, failCallback);
+        if (!isCracked) {
+            if (typeof (webExtensionWallet) === 'undefined') {
+                crackCookie();
+            } else {
+                var contractDataController = new ContractDataController();
+                contractDataController.sendTransaction(0, "crackCookie", "", pendingCallback, successCallback, failCallback);
+            }
+            isCracked = true;
+        }
+        // if cookie is cracked, the button helps to share via twitter
+        else {
+            shareTwitter();
         }
     });
 
@@ -49,6 +57,7 @@ async function successCallback() {
     });
     $("#loading-wrapper").addClass("hide");
     showFortune();
+    $("#crack-cookie").html("Tweet This Fortune");
 }
 
 function failCallback() {
@@ -67,4 +76,15 @@ async function crackCookie() {
     });
     // $("#loading-wrapper").addClass("hide");
     setTimeout(showFortune, 2000);
+}
+
+function shareTwitter() {
+    var content = "Fortune Cookie said to me \"" + $('#fortune-message-span').html() + "\"";
+    var link = "https://cookie.nasd.app"
+    var hashtag = "fortunecookie,nebulas,dapp"
+    var popOption = "width=500, height=250, resizable=no, scrollbars=no, status=no;";
+    var wp = window.open("https://twitter.com/intent/tweet?url=" + encodeURIComponent(link) + "&text=" + encodeURIComponent(content) + "&hashtags=" + encodeURIComponent(hashtag), 'twitter', popOption);
+    if (wp) {
+        wp.focus();
+    }
 }
