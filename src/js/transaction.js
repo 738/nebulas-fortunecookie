@@ -1,5 +1,5 @@
+var isCracked = false;
 $(function () {
-    var isCracked = false;
     $("#crack-cookie").click(function () {
         if (!isCracked) {
             if (typeof (webExtensionWallet) === 'undefined') {
@@ -8,7 +8,6 @@ $(function () {
                 var contractDataController = new ContractDataController();
                 contractDataController.sendTransaction(0, "crackCookie", "", pendingCallback, successCallback, failCallback);
             }
-            isCracked = true;
         }
         // if cookie is cracked, the button helps to share via twitter
         else {
@@ -59,6 +58,7 @@ async function successCallback() {
     showFortune();
     $("#crack-cookie").html(`<i class="fab fa-twitter" style="margin-right: 10px"></i>Tweet This Fortune`);
     $("#crack-cookie").addClass("twitter");
+    isCracked = true;
 }
 
 function failCallback() {
