@@ -47,6 +47,14 @@
     font-size: 50px;
 }
 
+.neon-description {
+    font-size: 20px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3), 0 0px 15px #ffeaa7, 0 0 10px #fdcb6e, 0 0 50px #fdcb6e;
+    -ms-transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
 @-moz-keyframes fade {
     40% {
         opacity: 0.8;
@@ -166,5 +174,9 @@
 
     .neon-purple {
         font-size: 40px;
+    }
+
+    .neon-description {
+        font-size: 14px;
     }
 }
