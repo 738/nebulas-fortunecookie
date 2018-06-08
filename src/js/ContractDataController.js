@@ -49,7 +49,10 @@ class ContractDataController {
         this.nebPay.queryPayInfo(this.serialNumber, { callback: this.callbackUrl })
             .then(res => {
                 var status = JSON.parse(res).data.status;
+                var code = JSON.parse(res).code;
                 console.log(res);
+                // console.log('status : ',status);
+                // console.log('code : ', code);
                 // tx: pending
                 if (status === 1 || status === 0) {
                     if (this.intervalId) clearInterval(this.intervalId);
@@ -60,7 +63,7 @@ class ContractDataController {
                     successCallbackListener && successCallbackListener();
                 }
                 // tx: fail
-                else if (status === 0) {
+                else if (status === 0 || code === 1) {
                     failCallbackListener && failCallbackListener();
                 }
             })

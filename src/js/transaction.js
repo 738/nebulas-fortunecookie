@@ -63,7 +63,7 @@ async function successCallback() {
 
 function failCallback() {
     $("#loading-wrapper").addClass("hide");
-    alert('transaction is failed!');
+    alert('transaction has little problem! try again');
 }
 
 async function crackCookie() {
